@@ -1,15 +1,15 @@
 <template>
-  <div class="sb">
+  <div class="sb" :class="{'show': sidebarShow}">
     <div class="header">
-      <img class="avatar" src="../../assets/logo.png" alt="">
-      <div class="nickname">Fuck you</div>
+      <img class="avatar" src="../../assets/pujing.jpg" alt="">
+      <div class="nickname">TODO</div>
     </div>
     <div class="menu">
-      <div v-for="menu in menus" class="item">
+      <div v-for="menu in menus" class="item" @click="goPage(menu)">
         <div class="icon">
-          <i class="iconfont icon-people"></i>
+          <i class="iconfont" :class="menu.icon"></i>
         </div>
-        <span class="menu-text">{{menu}}</span>
+        <span class="menu-text">{{menu.name}}</span>
       </div>
     </div>
   </div>
@@ -17,26 +17,29 @@
 
 
 <script>
-  export default {
-    props: {
-      show: {
-        type: Boolean
-      }
-    },
-    data () {
-      return {
-        menus: {
-          home: 'Home',
-          addTeacher: 'Add Teacher',
-          login: 'Login'
+import {mapState} from 'vuex'
+export default {
+  data () {
+    return {
+      menus: [
+        {
+          name: 'Home',
+          router: 'home',
+          icon: 'icon-homepage'
         }
-      }
-    },
-    computed: {
-    },
-    methods: {
+      ]
+    }
+  },
+  computed: {
+    ...mapState(['sidebarShow'])
+  },
+  methods: {
+    goPage (menu) {
+      this.$store.commit('UPDATE_SIDEBARSHOW')
+      this.$router.push({name: menu.router})
     }
   }
+}
 </script>
 
 
@@ -45,10 +48,15 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: -4.266667rem;
     background-color: #22262a;
     z-index: 10;
     width: 4.266667rem;
+    transition: all .3s ease;
+  }
+
+  .show {
+    transform: translateX(4.266667rem)
   }
 
   .sb .header {
@@ -59,24 +67,24 @@
 
   .sb .header .avatar {
     display: block;
-    width: 40%;
-    height: auto;
-    margin: 0.341333rem 1.194667rem;
+    width: 1.706667rem;
+    height: 1.706667rem;
+    margin: 0.341333rem auto;
     border-radius: 50%;
   }
 
   .sb .header .nickname {
     font-size: 14px;
     color: #fff;
-    line-height: 28px;
+    line-height: 0.512rem;
     font-weight: 500;
     text-align: center;
   }
 
   .sb .menu .item {
     display: block;
-    font-size: 14px;
-    padding: 10px 13px;
+    font-size: 15px;
+    padding: 10px 10px;
     text-align: left;
     text-indent: 1px;
     line-height: 15px;
@@ -88,8 +96,8 @@
 
   .sb .menu .item .icon {
     display: inline-block;
-    width: 0.512rem;
-    height: 0.512rem;
+    width: 0.682667rem;
+    height: 0.682667rem;
     background-color: #383c40;
     border-radius: 50%;
     vertical-align: top;
@@ -98,7 +106,8 @@
 
   .sb .menu .item .icon .iconfont {
     color: #999999;
-    line-height: 30px;
+    line-height: 0.682667rem;
+    font-size: 20px;
     font-weight: 700;
   }
 

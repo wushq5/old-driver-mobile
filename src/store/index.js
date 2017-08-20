@@ -4,23 +4,24 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
+  title: '河蟹號',
   teacher: null,
-  isAuth: false,
-  navIndex: 'favourite'   // upload_teacher sign_in
+  homework: null,
+  sidebarShow: false
 }
 
 const mutations = {
-  setTeacher (state, { teacher }) {
+  UPDATE_TITLE (state, title) {
+    state.title = title || '河蟹號'
+  },
+  UPDATE_TEACHER (state, teacher) {
     state.teacher = teacher
   },
-  clearTeacher (state) {
-    state.teacher = null
+  UPDATE_HOMEWORK (state, homework) {
+    state.homework = homework
   },
-  authStatus (state, { isAuth }) {
-    state.isAuth = isAuth
-  },
-  setNavIndex (state, { navIndex }) {
-    state.navIndex = navIndex
+  UPDATE_SIDEBARSHOW (state) {
+    state.sidebarShow = !state.sidebarShow
   }
 }
 

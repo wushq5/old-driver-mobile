@@ -4,16 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import VueResource from 'vue-resource'
-import ElementUI from 'element-ui'
-// import 'element-ui/lib/theme-default/index.css'
 import './styles/reset.css'
+import './styles/common.css'
 import './styles/iconfont.css'
 
 Vue.config.productionTip = false
-
-Vue.use(VueResource)
-Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({

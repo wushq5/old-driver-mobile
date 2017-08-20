@@ -1,25 +1,23 @@
 <template>
-  <div class="container">
-    <div class="info">
-      <img :src="teacher.photo" height="250" width="250" alt="">
-      <div class="detail">
-        <p class="teacher-name"><strong>{{teacher.name}}</strong></p>
-        <p class="teacher-desc">{{teacher.desc}}</p>
-        <p class="detail-left"><span>Birthday: </span>{{teacher.birthday}}</p>
-        <p class="detail-right"><span>B-W-H: </span>{{teacher.bwh}}</p>
-        <p class="detail-left"><span>Height: </span>{{teacher.height}}cm</p>
-        <p class="detail-right"><span>Weight: </span>{{teacher.weight ? teacher.weight: '- '}}kg</p>
-        <el-button class="btn" type="success" @click="goUploadHomework">Upload Homework</el-button>
-        <el-button class="btn" type="success" @click="goUpdateTeacher">Update Teacher</el-button>
+  <div>
+    <div class="teacher">
+      <img class="photo" :src="teacher.photo" alt="">
+      <h1>{{teacher.name}}</h1>
+      <p class="desc">{{teacher.desc}}</p>
+      <div class="other">
+        <p>Birthday: {{teacher.birthday}}</p>
+        <p>B-W-H: {{teacher.bwh}}</p>
+      </div>
+      <div class="other">
+        <p>Height: {{teacher.height}}cm</p>
+        <p>Weight: {{teacher.weight ? teacher.weight: '- '}}kg</p>
       </div>
     </div>
-    <div class="homework">
-      <div class="item" v-for="(homework, index) in homeworks" @click.native="toHomework(homework)">
-         <img :src="homework.cover" class="image">
-          <div class="id">
-            <span v-text="homework.id"></span>
-          </div>
-      </div>
+    <!-- <button class="btn" type="success" @click="goUploadHomework">Upload Homework</button> -->
+    <!-- <button class="btn" type="success" @click="goUpdateTeacher">Update Teacher</button> -->
+    <div class="homework" v-for="(homework, index) in homeworks" @click="goHomework(homework)">
+      <img class="img" :src="homework.cover">
+      <p class="text" v-text="homework.id"></p>
     </div>
   </div>
 </template>
@@ -54,6 +52,12 @@ export default {
         birthday: moment(this.teacher.birthday).format('YYYY-MM-DD')
       })
       this.getHomeworks(this.teacher._id)
+      this.$store.commit('UPDATE_TITLE', this.teacher.name)
+    },
+
+    goHomework: function (homework) {
+      this.$store.commit('UPDATE_HOMEWORK', homework)
+      this.$router.push({name: 'homework'})
     },
 
     goUploadHomework: function () {
@@ -71,73 +75,49 @@ export default {
 </script>
 
 <style scoped>
-  .container {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 0.853333rem;
+  }
+
+  .photo {
+    display: block;
+    margin: 0.170667rem auto 0;
+    max-width: 3.413333rem;
+    max-height: 4.266667rem;
+  }
+
+  .desc {
+    font-size: 14px;
+    padding: 0 0.170667rem;
+  }
+
+  .other {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0.170667rem 0.170667rem 0;
   }
 
-  .info {
-    display: flex;
-  }
-
-  .info .detail {
-    padding-left: 10px;
-  }
-
-  .teacher-name {
-    font-size: 18px;
-  }
-
-  .teacher-desc {
+  .other p {
+    display: inline-block;
     font-size: 15px;
-    width: 750px;
-  }
-
-  .detail-left {
-    display: inline-block;
-    width: 50%;
-  }
-
-  .detail-right {
-    display: inline-block;
-    width: 49%;
-  }
-
-  .detail-left span {
-    display: inline-block;
-    color: #999;
-    width: 80px;
-  }
-
-  .detail-right span {
-    display: inline-block;
-    color: #999;
-    width: 80px;
+    width: 3.2rem;
   }
 
   .homework {
-    width: 80%;
-  }
-
-  .homework .item {
     display: inline-block;
-    padding: 10px;
+    width: 2.986667rem;
+    height: 3.84rem;
+    margin: 0.106667rem;
   }
 
-  .id {
-    padding: 14px;
+  .homework .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .homework .text {
+    font-size: 15px;
     text-align: center;
-  }
-
-  .btn {
-    width: 200px;
-  }
-
-  .image {
-    width: 250px;
-    height: 250px;
-    display: block;
-    margin: 0 auto;
   }
 </style>

@@ -1,62 +1,58 @@
 <template>
-  <div class="container">
-    <navMenu class="nav"></navMenu>
-    <sidebar></sidebar>
-    <router-view></router-view>
+  <div>
+    <div class="card" v-for="(teacher, index) in teachers" @click="toTeacher(teacher)">
+      <img class="img" :src="teacher.photo">
+      <p class="text" v-text="teacher.name"></p>
+    </div>
   </div>
 </template>
 
 <script>
-  import navMenu from './comps/navMenu'
-  import sidebar from './comps/sidebar'
-  export default {
-    name: 'home',
-    components: {
-      navMenu,
-      sidebar
+import cgi from '../modules/cgi'
+export default {
+  name: 'favourite',
+  data () {
+    return {
+      teachers: null
     }
+  },
+  methods: {
+    init () {
+      this.$store.commit('UPDATE_TITLE')
+
+      cgi.getAllTeachers().then((res) => {
+        if (res.data && res.data.length > 0) {
+          this.teachers = res.data
+        }
+      })
+    },
+
+    toTeacher (teacher) {
+      this.$store.commit('UPDATE_TEACHER', teacher)
+      this.$router.push({name: 'teacher'})
+    }
+  },
+  mounted: function () {
+    this.init()
   }
+}
 </script>
 
 <style scoped>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .card {
+    display: inline-block;
+    width: 2.986667rem;
+    height: 3.84rem;
+    margin: 0.106667rem;
   }
 
-  .nav {
+  .card .img {
     width: 100%;
+    height: 100%;
   }
 
-  .form {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .el-card {
-    margin-top: 10px;
-  }
-
-  .name {
-    padding: 14px;
+  .card .text {
+    font-size: 15px;
     text-align: center;
-  }
-
-  .image {
-    width: 200px;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-      display: table;
-      content: "";
-  }
-  
-  .clearfix:after {
-      clear: both
   }
 </style>
