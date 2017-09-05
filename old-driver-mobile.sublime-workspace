@@ -4,8 +4,76 @@
 		"selected_items":
 		[
 			[
+				"cla",
+				"classList"
+			],
+			[
+				"add",
+				"addClass	.addClass()"
+			],
+			[
+				"toa",
+				"toast"
+			],
+			[
+				"dona",
+				"donate1s"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
 				"bo",
-				"border"
+				"bold"
+			],
+			[
+				"tex",
+				"text-shadow"
+			],
+			[
+				"te",
+				"teacher"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"home",
+				"homework	(teacher.vue)"
+			],
+			[
+				"show",
+				"showSidebar"
+			],
+			[
+				"map",
+				"mapState"
+			],
+			[
+				"menu",
+				"menuShow"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"item",
+				"align-items"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"ex",
+				"export	(Home.vue)"
 			],
 			[
 				"icon",
@@ -32,20 +100,12 @@
 				"top"
 			],
 			[
-				"cla",
-				"class"
-			],
-			[
 				"ma",
 				"margin-top	(Favourite.vue)"
 			],
 			[
 				"z",
 				"z-index"
-			],
-			[
-				"inli",
-				"inline-block"
 			],
 			[
 				"for",
@@ -236,10 +296,6 @@
 				"isPointInRange( node: Node, offset: unsigned long ): boolean	Range"
 			],
 			[
-				"ex",
-				"express"
-			],
-			[
 				"di",
 				"display"
 			],
@@ -282,10 +338,6 @@
 			[
 				"res",
 				"result"
-			],
-			[
-				"add",
-				"addUncrawUrls	(url_manager.js)"
 			],
 			[
 				"conte",
@@ -436,10 +488,6 @@
 				"relative"
 			],
 			[
-				"mar",
-				"margin"
-			],
-			[
 				"mai",
 				"margin"
 			],
@@ -466,59 +514,35 @@
 			[
 				"www",
 				"www.webankcdn.net	(mixin.js)"
-			],
-			[
-				"be",
-				"beefNoodles"
-			],
-			[
-				"de",
-				"department"
-			],
-			[
-				"test",
-				"testingGroup"
-			],
-			[
-				"dev",
-				"developmentGroup"
-			],
-			[
-				"proto",
-				"prototype"
-			],
-			[
-				"sta",
-				"staff"
-			],
-			[
-				"mak",
-				"makeSoup"
-			],
-			[
-				"sit",
-				"sit	(app.js)"
-			],
-			[
-				"st",
-				"strategyfn"
-			],
-			[
-				"lo",
-				"log"
-			],
-			[
-				"off",
-				"offsetHeight"
-			],
-			[
-				"offset",
-				"offsetHeight"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "build/webpack.dev.conf.js",
+			"settings":
+			{
+				"buffer_size": 1225,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build/webpack.prod.conf.js",
+			"settings":
+			{
+				"buffer_size": 3742,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build/webpack.base.conf.js",
+			"settings":
+			{
+				"buffer_size": 1548,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -585,10 +609,39 @@
 	},
 	"expanded_folders":
 	[
-		"/D/proj/old-driver-mobile"
+		"/D/proj/old-driver-mobile",
+		"/D/proj/old-driver-mobile/build",
+		"/D/proj/old-driver-mobile/config",
+		"/D/proj/old-driver-mobile/dist"
 	],
 	"file_history":
 	[
+		"/D/proj/old-driver-srv/package.json",
+		"/D/proj/old-driver-mobile/npm-debug.log",
+		"/D/proj/old-driver-mobile/src/components/teacher.vue",
+		"/D/proj/old-driver-mobile/src/components/comps/sidebar.vue",
+		"/D/proj/old-driver-mobile/src/components/comps/header.vue",
+		"/D/proj/old-driver-mobile/src/components/homework.vue",
+		"/D/proj/old-driver-mobile/dist/index.html",
+		"/D/proj/old-driver-mobile/src/main.js",
+		"/D/proj/old-driver-mobile/src/components/about.vue",
+		"/D/proj/old-driver-mobile/config/index.js",
+		"/D/proj/old-driver-mobile/build/webpack.base.conf.js",
+		"/D/proj/old-driver-mobile/build/webpack.prod.conf.js",
+		"/D/proj/old-driver-mobile/src/store/index.js",
+		"/D/proj/old-driver-mobile/src/router/index.js",
+		"/D/proj/old-driver-mobile/src/styles/common.css",
+		"/D/proj/old-driver-mobile/src/styles/reset.css",
+		"/D/proj/old-driver-mobile/package.json",
+		"/D/proj/old-driver-mobile/src/components/home.vue",
+		"/D/proj/old-driver-mobile/index.html",
+		"/D/proj/old-driver-mobile/src/styles/iconfont.css",
+		"/D/proj/old-driver-mobile/src/App.vue",
+		"/D/proj/old-driver-mobile/src/store/mutation-types.js",
+		"/D/proj/old-driver-mobile/src/components/Home.vue",
+		"/D/proj/old-driver-mobile/src/components/UploadTeacher.vue",
+		"/D/proj/old-driver-mobile/src/components/comps/navMenu.vue",
+		"/D/proj/old-driver-mobile/old-driver-fed.sublime-project",
 		"/D/proj/old-driver-fed/index.html",
 		"/D/proj/old-driver-fed/src/components/Home.vue",
 		"/D/proj/old-driver-fed/src/main.js",
@@ -616,7 +669,6 @@
 		"/D/Code/nodejs/myblog/lib/mongo.js",
 		"/D/Code/nodejs/myblog/models/comments.js",
 		"/D/proj/old-driver-fed/dist/static/js/app.50f0f521d9bead5d874d.js",
-		"/D/proj/old-driver-srv/package.json",
 		"/D/Code/nodejs/myblog/models/posts.js",
 		"/D/proj/old-driver-fed/package.json",
 		"/D/proj/old-driver-fed/build/dev-server.js",
@@ -691,42 +743,18 @@
 		"/C/Users/树强/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
 		"/C/Users/树强/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
 		"/C/Users/树强/AppData/Roaming/Sublime Text 3/Packages/User/SublimeCodeIntel.sublime-settings",
-		"/D/Code/python/mybolg/mybolg/settings.py",
-		"/D/Code/python/mybolg/blog/views.py",
-		"/D/Code/python/mybolg/blog/urls.py",
-		"/D/Code/python/mybolg/blog/models.py",
-		"/D/My/app/views/account/account.html",
-		"/D/My/app/views/account/activeFail.html",
-		"/D/My/app/views/account/advertising.html",
-		"/D/proj/xlsx2json/test/test.js",
-		"/D/My/app/js/controllers/account/advertising.js",
-		"/D/My/app/js/controllers/trans/payResult.js",
-		"/D/My/app/js/services/utils/weChatShare.js",
-		"/D/proj/xlsx2json/config.json",
-		"/C/Windows/System32/drivers/etc/HOSTS",
-		"/C/Users/树强/Desktop/HOSTS",
-		"/D/proj/hjfed.github.io/Gruntfile.js",
-		"/D/proj/hjfed.github.io/about.md",
-		"/D/proj/wushq5.github.io/_includes/read-more.html",
-		"/D/proj/wushq5.github.io/_posts/2016-11-27-video-post.md",
-		"/D/proj/wushq5.github.io/_posts/2016-12-02-sample-post.md",
-		"/D/proj/my-awesome-blog/Gemfile",
-		"/E/Program Files/Ruby23-x64/lib/ruby/gems/2.3.0/extensions/x64-mingw32/2.3.0/redcarpet-3.4.0/gem_make.out",
-		"/D/proj/my-awesome-blog/_config.yml",
-		"/D/proj/wushq5.github.io/_config.yml",
-		"/D/proj/my-awesome-blog/Gruntfile.js",
-		"/D/proj/my-awesome-blog/package.json",
-		"/D/proj/wushq5.github.io/_layouts/compress.html"
+		"/D/Code/python/mybolg/mybolg/settings.py"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
 		"height": 109.0,
 		"where_history":
 		[
+			"-/dist/*",
 			""
 		]
 	},
@@ -735,6 +763,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"update_homework",
+			"home",
+			"setNavIndex",
+			"sidebarShow",
+			"sidebar",
 			"512rem",
 			"http",
 			"this.time",
@@ -764,8 +797,105 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "build/webpack.dev.conf.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "build/webpack.prod.conf.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "build/webpack.base.conf.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1278,
+								1278
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -854,7 +984,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 182.0,
+	"side_bar_width": 216.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
